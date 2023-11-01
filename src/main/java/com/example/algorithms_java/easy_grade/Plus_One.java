@@ -78,5 +78,9 @@ public class Plus_One {
 
         return result;
     }
+    public  static int[] plusOneWithHashMap(int[] digits){
+
+        return digits;
+    }
 }
 
