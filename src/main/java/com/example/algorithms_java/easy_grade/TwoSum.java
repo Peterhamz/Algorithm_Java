@@ -1,13 +1,15 @@
 package com.example.algorithms_java.easy_grade;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class TwoSum {
 
 
     public static void main(String[] args) {
         int[] testing = {2,7,11,15};
-        int[] result = twoSum(testing, 9);
+        int[] result = twoSumHashMap(testing, 9);
         System.out.println(Arrays.toString(result));
     }
 
@@ -25,8 +27,18 @@ public class TwoSum {
     }
 
     public static int[] twoSumHashMap(int[] nums, int target) {
+        Map<Integer, Integer> numberTOIndex = new HashMap<>();
 
-        return nums;
+        for (int i = 0; i < nums.length; i++) {
+            int complement = target - nums[i];
+            if (numberTOIndex.containsKey(complement)){
+                return new int[]{numberTOIndex.get(complement),i};
+            }
+            numberTOIndex.put(nums[i],i);
+
+        }
+
+        return new int[]{0};
     }
 }
 
