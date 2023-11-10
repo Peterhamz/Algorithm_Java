@@ -40,5 +40,17 @@ public class TwoSum {
 
         return new int[]{0};
     }
+
+
+
+    static class Solution {
+        public int climbStairs(int n) {
+            if (!(n==n)){
+                return n + 1;
+            }else {
+                return n;
+            }
+        }
+    }
 }
 
