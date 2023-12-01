@@ -27,6 +27,9 @@ public class Search_Insert_Position {
             //if target found, return the index
             return index;
         }
+    }
+    public static int searchInsertHash_map(int[] nums, int target) {
 
+        return target;
     }
 }
